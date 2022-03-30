@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<img src="../images/pic_bulboff.gif" alt="" id="img_bulb" />
+<br>
+<button id="btn" onclick="bulb_OnOff()">Turn On</button>
+
+<script>
+function bulb_OnOff() {
+	//img 요소의 src속성을 변경
+	var img = document.getElementById("img_bulb");
+	var btn =  document.getElementById("btn");
+	if (btn.innerText =="Turn On") {
+		img.src="../img/pic_bulbon.gif";
+		btn.innerText="Turn Off";
+	} else {
+		img.src="../img/pic_bulboff.gif";
+		btn.innerText="Turn On";
+	}
+}
+
+</script>
+</body>
+</html>
