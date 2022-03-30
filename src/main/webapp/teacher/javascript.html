@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- javascript 코드 입력 -->
+</head>
+<body>
+<button onclick="on()">Turn On</button>
+<img src="../img/pic_bulboff.gif" alt="전구" id="bulb">
+<button onclick="off()">Turn Off</button>
+<!-- javascript 코드 입력 -->
+<script>
+function on(){
+	//var img = document.images[0].src;
+	document.getElementById("bulb").src = "../img/pic_bulbon.gif";
+	console.log("온");
+}
+
+function off(){
+	console.log("오프");
+}
+</script>
+</body>
+</html>
