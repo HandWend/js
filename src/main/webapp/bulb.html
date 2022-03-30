@@ -9,7 +9,8 @@
 <h2>자바스크립트: 전구 on/off </h2>
 
 <button onclick="on()">Turn On</button>
-<img src="img/pic_bulboff.gif" alt="전구">
+<!-- 확인 -->
+<img src="img/pic_bulboff.gif" alt="전구" id="bulb">
 <button onclick="off()">Turn off</button>
 
 <!-- <button onclick="document.getElementById('bulb').src='img/pic_bulbon.gif'">Turn on</button>
@@ -25,6 +26,7 @@ function on() {
 }
 
 function off() {
+	document.getElementById("bulb").src = "img/pic_bulboff.gif";
 	console.log("오프");
 }
 </script>
