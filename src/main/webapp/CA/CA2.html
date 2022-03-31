@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="alert-box" id = "alert">Alert box</div>
+<button onclick="th()">버튼</button>
+<button onclick="close()">닫기</button>
+
+
+<script>
+function th() {
+	document.getElementById('alert').style.display = 'block';
+	}
+	
+function close() {
+	document.getElementById('alert').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
