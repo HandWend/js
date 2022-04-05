@@ -13,16 +13,31 @@
 	height: 84px;
 	text-align:center; 
 }
+#run2 {
+	position:absolute; 
+	top:100px; 
+	left:100px; 
+	border:2px solid blue; 
+	height: 84px;
+	text-align:center; 
+}
 
 </style>
 </head>
 <body>
-<div id="run" style ="top:100px; left:100px" onmouseover="mover();" onmouseout="out();">Com:<br>나 잡아봐라</div>
+<img id = "run" src="thief.png" style ="width: 100px; height: 100px; top:200px; left:150px" onmouseover="mover();" onmouseout="out();">
+<img id = "run2" src="hacker.png" style ="width: 100px; height: 100px; top:100px; left:100px" onmouseover="mover2();" onmouseout="out();">
+<!-- <div id="run" style ="top:100px; left:100px" onmouseover="mover();" onmouseout="out();">Com:<br>나 잡아봐라</div> -->
 <script>
 function mover() {
 	document.getElementById("run").style.top = (Math.random()*1000)+"px";
 	document.getElementById("run").style.left = (Math.random()*1000)+"px";
 	//console.log("top:"+ top, "left:" +left);
+}
+function mover2() {
+
+	document.getElementById("run2").style.top = (Math.random()*1000)+"px";
+	document.getElementById("run2").style.left = (Math.random()*1000)+"px";
 }
 function out() {
 	console.log("out" + (Math.random()*1000));
