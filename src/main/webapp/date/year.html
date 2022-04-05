@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>JavaScript getFullYear()</h2>
+<p>The getFullYear() method returns the full year of a date:</p>
+
+<p id="demo"></p>
+
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+/* document.getElementById("demo").innerHTML = d.getFullYear(); // 2022 */ 
+
+/* new Date(millsec) */
+/* new Date(date string) */
+/* const d = new Date(year, month, day, hours, min, sec, millsec) */
+/* const d = new Date(2019, 5, 13, 9, 30, 0, 0) 
+ * 꼭 다 안채워도 된다.*/
+
+ const d = new Date(86400000);
+ 
+
+</script>
+
+</body>
+</html>
