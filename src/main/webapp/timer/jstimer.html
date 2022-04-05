@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="num">0</h1>
+<button onclick="numUp()">증가</button>
+<button onclick="numDown()">감소</button>
+
+<script>
+let i = 0;
+function numUp() {
+	/* 변수선언 */
+	i++;
+	document.getElementById("num").innerHTML = i;
+	console.log("증가됨");
+}
+
+function numDown() {
+	i--;
+	document.getElementById("num").innerHTML = i;
+	console.log("감소됨");
+}
+</script>
+</body>
+</html>
