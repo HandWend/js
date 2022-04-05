@@ -6,8 +6,8 @@
 </head>
 <body>
 <h1 id="num">0</h1>
-<button onclick="numUp(); this.disabled=false;">증가</button>
-<button onclick="numDown()">감소</button>
+<button onclick="numUp(); this.disabled=true" id = "up">증가</button>
+<button onclick="numDown(); this.disable=true" id = "down">감소</button>
 <button onclick="numShutdown()">중지</button>
 
 <script>
@@ -15,14 +15,15 @@ let i = 0;
 let timer, timer2;
 
 function numShutdown() {
-	clearTimeout(timer);
-	clearTimeout(timer2);
+	numStop(timer);
+	numStop(timer2);
 	document.getElementById("num").innerHTML = 0;
 	i=0;
+	document.getElementById("up").disabled=false;
+	document.getElementById("down").disabled=false;
 }
 
 function numUp() {
-	numStop();
 	/* 변수선언 */
 	i++;
 	document.getElementById("num").innerHTML = i;
@@ -30,19 +31,15 @@ function numUp() {
 }
 
 function numDown() {
-	numStop();
+	numStop(timer);
 	i--;
 	document.getElementById("num").innerHTML = i;
 	timer2 = setTimeout(numDown, 1000);
 }
-
-function numStop() {
-	clearTimeout(timer);
+function numStop(t) {
+	clearTimeout(t);
 }
 
-function numPause() {
-	
-}
 </script>
 </body>
 </html>
