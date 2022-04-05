@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="num">0</h1>
+<button onclick="numUp(); this.disabled=false;">증가</button>
+<button onclick="numDown()">감소</button>
+<button onclick="numShutdown()">중지</button>
+
+<script>
+let i = 0;
+let timer, timer2;
+
+function numShutdown() {
+	clearTimeout(timer);
+	clearTimeout(timer2);
+	document.getElementById("num").innerHTML = 0;
+	i=0;
+}
+
+function numUp() {
+	numStop();
+	/* 변수선언 */
+	i++;
+	document.getElementById("num").innerHTML = i;
+	timer = setTimeout(numUp, 1000);
+}
+
+function numDown() {
+	numStop();
+	i--;
+	document.getElementById("num").innerHTML = i;
+	timer2 = setTimeout(numDown, 1000);
+}
+
+function numStop() {
+	clearTimeout(timer);
+}
+
+function numPause() {
+	
+}
+</script>
+</body>
+</html>
